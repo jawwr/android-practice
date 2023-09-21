@@ -78,6 +78,12 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
             operator = btn.text.toString()
             return
         }
+        if (mainOutput.text.isNotEmpty()) {
+            equals()
+            isResult = false
+            inputOperator(btn)
+            return
+        }
         printValue(btn)
     }
 
