@@ -17,10 +17,9 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
     private var num1: Double = 0.0
     private var num2: Double = 0.0
     private var operator: String? = null
-    private var isResult: Boolean = false
+    private var state: State = State.INPUT_FIRST
 
     private val outputFormatter = DecimalFormat("#.######")
-    private val operators = listOf("+", "-", "/", "*")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +43,8 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
             R.id.btn_clear -> clear()
             R.id.btn_equals -> equals()
             R.id.btn_delete -> delete()
-            else -> inputValue(v as Button)
+            R.id.btn_div, R.id.btn_mul, R.id.btn_plus, R.id.btn_minus -> inputOperator(v as Button)
+            else -> inputNumber(v as Button)
         }
     }
 
@@ -54,20 +54,11 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
         operator = null
         num1 = 0.0
         num2 = 0.0
-        isResult = false
-    }
-
-    private fun inputValue(btn: Button) {
-        if (btn.text !in operators) {
-            inputNumber(btn)
-            return
-        }
-        inputOperator(btn)
+        state = State.INPUT_FIRST
     }
 
     private fun inputOperator(btn: Button) {
-        isResult = false
-        if (num1 == 0.0) {
+        if (state == State.INPUT_FIRST) {
             num1 = mainOutput.text.toString().replace(",", ".").toDouble()
             expressionOutput.text = buildString {
                 append(num1)
@@ -76,11 +67,12 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
             }
             mainOutput.text = "0"
             operator = btn.text.toString()
+            state = State.INPUT_SECOND
             return
         }
         if (mainOutput.text.isNotEmpty()) {
             equals()
-            isResult = false
+            state = State.INPUT_FIRST
             inputOperator(btn)
             return
         }
@@ -88,14 +80,21 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun inputNumber(btn: Button) {
-        if (isResult) {
+        if (state == State.SHOW_RESULT) {
             clear()
-            isResult = false
+            state = State.INPUT_FIRST
         }
         printValue(btn)
     }
 
     private fun printValue(btn: Button) {
+        if (btn.text == "," && mainOutput.text == "0") {
+            mainOutput.text = "0,"
+            return
+        }
+        if (btn.text == "," && mainOutput.text.contains(",")) {
+            return
+        }
         if (mainOutput.text == "0" && btn.text != "0") {
             mainOutput.text = btn.text
             return
@@ -107,15 +106,16 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun delete() {
+        if (state == State.SHOW_RESULT) {
+            clear()
+            return
+        }
         val size = mainOutput.text.length
         if (size == 1) {
             mainOutput.text = "0"
             return
         }
-        if (mainOutput.text[size - 1].toString() in operators) {
-            operator = null
-        }
-        mainOutput.text = mainOutput.text.removeRange(size - 1, size)
+        mainOutput.text = mainOutput.text.dropLast(1)
     }
 
     private fun equals() {
@@ -132,6 +132,12 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
         }
         clear()
         mainOutput.text = outputFormatter.format(result)
-        isResult = true
+        state = State.SHOW_RESULT
     }
+}
+
+enum class State {
+    INPUT_FIRST,
+    INPUT_SECOND,
+    SHOW_RESULT
 }
