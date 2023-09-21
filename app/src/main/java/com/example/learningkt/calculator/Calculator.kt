@@ -59,7 +59,7 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
 
     private fun inputOperator(btn: Button) {
         if (state == State.INPUT_FIRST) {
-            num1 = mainOutput.text.toString().replace(",", ".").toDouble()
+            num1 = mainOutput.text.toDoubleValue()
             expressionOutput.text = buildString {
                 append(num1)
                 append(" ")
@@ -99,6 +99,9 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
             mainOutput.text = btn.text
             return
         }
+        if (mainOutput.text == "0" && btn.text == "0") {
+            return
+        }
         mainOutput.text = buildString {
             append(mainOutput.text)
             append(btn.text)
@@ -122,7 +125,7 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
         if (operator.isNullOrEmpty()) {
             return
         }
-        num2 = mainOutput.text.toString().replace(",", ".").toDouble()
+        num2 = mainOutput.text.toDoubleValue()
         val result: Double = when (operator) {
             "+" -> num1 + num2
             "-" -> num1 - num2
@@ -135,6 +138,8 @@ class Calculator : AppCompatActivity(), View.OnClickListener {
         state = State.SHOW_RESULT
     }
 }
+
+fun CharSequence.toDoubleValue(): Double = this.toString().replace(",", ".").toDouble()
 
 enum class State {
     INPUT_FIRST,
