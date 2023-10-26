@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/person_avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/person_preview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Some name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/person_avatar"
+        app:layout_constraintTop_toTopOf="@+id/person_avatar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/message_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="2"
+        android:text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+        app:layout_constraintEnd_toStartOf="@id/message_time_view"
+        app:layout_constraintStart_toStartOf="@id/person_name"
+        app:layout_constraintTop_toBottomOf="@id/person_name" />
+
+    <TextClock
+        android:id="@+id/message_time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="10:10" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/message_counter"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/mssage_counter_background"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

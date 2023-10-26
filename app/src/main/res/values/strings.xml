@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">LearningKt</string>
+    <string name="app_name">Lesson1410</string>
+    <string name="week_navigation_title">Неделя</string>
+    <string name="day_navigation_title">День</string>
 </resources>
