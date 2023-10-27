@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@color/lesson_card_background">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lesson_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="25sp"
+        android:text="11:20"
+        android:textColor="@color/lesson_start_time"
+        android:textFontWeight="@integer/material_motion_duration_medium_1"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/lesson_end_time"
+        app:layout_constraintEnd_toStartOf="@id/lesson_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lesson_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="12:50"
+        android:textColor="@color/lesson_end_time"
+        android:textFontWeight="@integer/material_motion_duration_medium_1"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/lesson_start_time"
+        app:layout_constraintTop_toBottomOf="@id/lesson_start_time" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lesson_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:text="some lesson name"
+        android:textColor="@color/lesson_name"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/lesson_start_time"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lesson_auditorium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Аудитория: какая-то аудитория"
+        android:textColor="@color/lesson_auditorium"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/lesson_name"
+        app:layout_constraintTop_toBottomOf="@id/lesson_name" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lesson_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перподаватель: какой-то чел"
+        android:textColor="@color/lesson_teacher"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/lesson_name"
+        app:layout_constraintTop_toBottomOf="@id/lesson_auditorium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

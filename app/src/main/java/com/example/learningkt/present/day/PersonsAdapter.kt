@@ -4,8 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.learningkt.databinding.ChatItemPersonBinding
 import com.example.learningkt.data.PersonData
+import com.example.learningkt.databinding.ChatItemPersonBinding
+import kotlin.random.Random
 
 class PersonsAdapter : RecyclerView.Adapter<PersonsAdapter.PersonViewHolder>() {
     private val list = mutableListOf<PersonData>()
@@ -31,11 +32,10 @@ class PersonsAdapter : RecyclerView.Adapter<PersonsAdapter.PersonViewHolder>() {
         private val binding: ChatItemPersonBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: PersonData) = with(binding) {
-            personName?.text = data.name
-            messageTextView?.text = data.message
+            personName.text = data.name
+            messageTextView.text = data.message
             personAvatar.load(data.avatar)
-            messageCounter?.text = "1"
-            messageTimeView?.text = "12:56"
+            messageCounter.text = Random.nextInt(10).toString()
         }
     }
 }

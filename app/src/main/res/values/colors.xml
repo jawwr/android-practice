@@ -3,4 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="new_message">#00FF55</color>
+    <color name="lesson_start_time">#FFF</color>
+    <color name="lesson_end_time">#808080</color>
+    <color name="lesson_name">#FFF</color>
+    <color name="lesson_auditorium">#808080</color>
+    <color name="lesson_teacher">#808080</color>
+    <color name="highlight_lesson_card_background">#444</color>
+    <color name="lesson_card_background">#121212</color>
+    <color name="title">#141414</color>
+    <color name="background">#141414</color>
 </resources>
