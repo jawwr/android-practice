@@ -236,6 +236,25 @@ object SuperMegaUltraImportantScheduleService {
                             }
                         )
                     )
+                ),
+                Day(
+                    DayOfWeek.SUNDAY,
+                    0,
+                    listOf(
+                        Lesson(
+                            title = "some lesson 3",
+                            teacher = "something person",
+                            auditorium = "auditorium 3",
+                            startTime = Date().apply {
+                                hours = 10
+                                minutes = 0
+                            },
+                            endTime = Date().apply {
+                                hours = 22
+                                minutes = 0
+                            }
+                        )
+                    )
                 )
             )
         ),
@@ -465,6 +484,25 @@ object SuperMegaUltraImportantScheduleService {
                             }
                         )
                     )
+                ),
+                Day(
+                    DayOfWeek.SUNDAY,
+                    0,
+                    listOf(
+                        Lesson(
+                            title = "some lesson 3",
+                            teacher = "something person",
+                            auditorium = "auditorium 3",
+                            startTime = Date().apply {
+                                hours = 10
+                                minutes = 0
+                            },
+                            endTime = Date().apply {
+                                hours = 22
+                                minutes = 0
+                            }
+                        )
+                    )
                 )
             )
         )
@@ -502,7 +540,9 @@ object SuperMegaUltraImportantScheduleService {
     }
 
     fun getDayNow(): Day {
-        return getDayByDayOfWeek(DayOfWeek.getByNumber(Date().day - 1), getNowWeekNumber())
+        val today = Date().day
+        val dayNumber = if (today == 0) 6 else today - 1
+        return getDayByDayOfWeek(DayOfWeek.getByNumber(dayNumber), getNowWeekNumber())
     }
 
     fun getWeekNow(): Week {

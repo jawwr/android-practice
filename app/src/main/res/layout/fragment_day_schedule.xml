@@ -4,37 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/title">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/my_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/day_title"
-        app:layout_constraintVertical_bias="1.0"
-        tools:itemCount="5"
-        tools:listitem="@layout/schedule_item_lesson" />
+    android:background="@color/lesson_card_background">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/day_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:background="@color/title"
-        android:text="Четверг"
-        android:paddingStart="20dp"
-        android:textColor="@color/white"
-        android:gravity="center_vertical"
         android:height="80dp"
+        android:background="@drawable/rounded_day_title"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="Четверг"
+        android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/day_lesson_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_title"
+        app:layout_constraintVertical_bias="1.0"
+        tools:itemCount="5"
+        tools:listitem="@layout/schedule_item_lesson" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="На сегодня пар нет :)"
+        android:textColor="@color/text_about_zero_lessons"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/day_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

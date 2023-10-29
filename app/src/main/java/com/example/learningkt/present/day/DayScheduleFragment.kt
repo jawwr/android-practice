@@ -14,11 +14,11 @@ class DayScheduleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = DayAdapter()
+        adapter = DayAdapter(true)
 
         val daySchedule = SuperMegaUltraImportantScheduleService.getDayNow()
 
-        binding?.myRecycler?.adapter = adapter
+        binding?.dayLessonRecycler?.adapter = adapter
         binding?.dayTitle?.text = daySchedule.ofWeek.value
 
         adapter?.submitList(daySchedule.lessons)

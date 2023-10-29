@@ -13,7 +13,7 @@ enum class DayOfWeek(val value: String) {
         private val days = DayOfWeek.values()
         fun getByNumber(number: Int): DayOfWeek {
             if (number < 0 || number >= days.size) {
-                throw RuntimeException("Wrong day number")
+                throw RuntimeException("Wrong day number $number")
             }
             return days[number]
         }

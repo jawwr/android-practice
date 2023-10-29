@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:background="@color/lesson_card_background">
+    android:background="@drawable/rounded_day_title">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/lesson_start_time"
@@ -19,8 +19,7 @@
         app:layout_constraintBottom_toTopOf="@id/lesson_end_time"
         app:layout_constraintEnd_toStartOf="@id/lesson_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/lesson_end_time"
