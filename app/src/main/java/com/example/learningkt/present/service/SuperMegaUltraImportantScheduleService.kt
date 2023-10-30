@@ -5,6 +5,7 @@ import com.example.learningkt.data.DayOfWeek
 import com.example.learningkt.data.Lesson
 import com.example.learningkt.data.Schedule
 import com.example.learningkt.data.Week
+import java.util.Calendar
 import java.util.Date
 
 object SuperMegaUltraImportantScheduleService {
@@ -17,42 +18,42 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Экономика программной инженерии",
+                            teacher = "Ткач",
+                            auditorium = "(2к) 221",
                             startTime = Date().apply {
-                                hours = 11
+                                hours = 15
+                                minutes = 0
+                            },
+                            endTime = Date().apply {
+                                hours = 16
+                                minutes = 30
+                            }
+                        ),
+                        Lesson(
+                            title = "Базы и хранилища данных",
+                            teacher = "Барабанщиков",
+                            auditorium = "413",
+                            startTime = Date().apply {
+                                hours = 18
                                 minutes = 20
                             },
                             endTime = Date().apply {
-                                hours = 12
+                                hours = 19
                                 minutes = 50
                             }
                         ),
                         Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
+                            title = "Базы и хранилища данных",
+                            teacher = "Барабанщиков",
+                            auditorium = "413",
                             startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
+                                hours = 19
+                                minutes = 55
                             },
                             endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
+                                hours = 21
+                                minutes = 25
                             }
                         )
                     )
@@ -62,42 +63,29 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Управление ИТ-проектами и жизненным циклом ПО",
+                            teacher = "xQc",
+                            auditorium = "200",
                             startTime = Date().apply {
-                                hours = 11
+                                hours = 18
                                 minutes = 20
                             },
                             endTime = Date().apply {
-                                hours = 12
+                                hours = 19
                                 minutes = 50
                             }
                         ),
                         Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
+                            title = "Управление ИТ-проектами и жизненным циклом ПО",
+                            teacher = "xQc",
+                            auditorium = "200",
                             startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
+                                hours = 19
+                                minutes = 55
                             },
                             endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
+                                hours = 21
+                                minutes = 25
                             }
                         )
                     )
@@ -107,42 +95,42 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Анализ данных",
+                            teacher = "Алюков",
+                            auditorium = "A-13",
                             startTime = Date().apply {
-                                hours = 11
+                                hours = 16
+                                minutes = 40
+                            },
+                            endTime = Date().apply {
+                                hours = 18
+                                minutes = 10
+                            }
+                        ),
+                        Lesson(
+                            title = "Базы и хранилища данных",
+                            teacher = "Барабанщиков",
+                            auditorium = "132",
+                            startTime = Date().apply {
+                                hours = 18
                                 minutes = 20
                             },
                             endTime = Date().apply {
-                                hours = 12
+                                hours = 19
                                 minutes = 50
                             }
                         ),
                         Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
+                            title = "Базы и хранилища данных",
+                            teacher = "Барабанщиков",
+                            auditorium = "132",
                             startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
+                                hours = 19
+                                minutes = 55
                             },
                             endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
+                                hours = 21
+                                minutes = 25
                             }
                         )
                     )
@@ -152,42 +140,29 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Разработка интернет-приложений",
+                            teacher = "Павличенков",
+                            auditorium = "Online",
                             startTime = Date().apply {
-                                hours = 11
-                                minutes = 20
+                                hours = 19
+                                minutes = 30
                             },
                             endTime = Date().apply {
-                                hours = 12
-                                minutes = 50
+                                hours = 20
+                                minutes = 30
                             }
                         ),
                         Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
+                            title = "Разработка интернет-приложений",
+                            teacher = "Павличенков",
+                            auditorium = "Online",
                             startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
+                                hours = 20
+                                minutes = 30
                             },
                             endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
+                                hours = 21
+                                minutes = 30
                             }
                         )
                     )
@@ -197,9 +172,22 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Технологии прикладного программирования",
+                            teacher = "Веригин Н.",
+                            auditorium = "132",
+                            startTime = Date().apply {
+                                hours = 9
+                                minutes = 40
+                            },
+                            endTime = Date().apply {
+                                hours = 11
+                                minutes = 10
+                            }
+                        ),
+                        Lesson(
+                            title = "Технологии прикладного программирования",
+                            teacher = "Веригин Н.",
+                            auditorium = "132",
                             startTime = Date().apply {
                                 hours = 11
                                 minutes = 20
@@ -210,9 +198,9 @@ object SuperMegaUltraImportantScheduleService {
                             }
                         ),
                         Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
+                            title = "Технологии прикладного программирования",
+                            teacher = "Веригин Н.",
+                            auditorium = "132",
                             startTime = Date().apply {
                                 hours = 13
                                 minutes = 15
@@ -223,35 +211,16 @@ object SuperMegaUltraImportantScheduleService {
                             }
                         ),
                         Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
+                            title = "Технологии прикладного программирования",
+                            teacher = "Веригин Н.",
+                            auditorium = "132",
                             startTime = Date().apply {
-                                hours = 10
+                                hours = 15
                                 minutes = 0
                             },
                             endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
-                            }
-                        )
-                    )
-                ),
-                Day(
-                    DayOfWeek.SUNDAY,
-                    0,
-                    listOf(
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
+                                hours = 16
+                                minutes = 30
                             }
                         )
                     )
@@ -265,42 +234,29 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Экономика программной инженерии",
+                            teacher = "Ткач",
+                            auditorium = "(2к) 304",
                             startTime = Date().apply {
-                                hours = 11
+                                hours = 14
+                                minutes = 40
+                            },
+                            endTime = Date().apply {
+                                hours = 18
+                                minutes = 10
+                            }
+                        ),
+                        Lesson(
+                            title = "Экономика программной инженерии",
+                            teacher = "Ткач",
+                            auditorium = "(2к) 304",
+                            startTime = Date().apply {
+                                hours = 18
                                 minutes = 20
                             },
                             endTime = Date().apply {
-                                hours = 12
+                                hours = 19
                                 minutes = 50
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
-                            startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
-                            },
-                            endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
                             }
                         )
                     )
@@ -310,42 +266,29 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Управление ИТ-проектами и жизненным циклом ПО",
+                            teacher = "xQc",
+                            auditorium = "200",
                             startTime = Date().apply {
-                                hours = 11
+                                hours = 18
                                 minutes = 20
                             },
                             endTime = Date().apply {
-                                hours = 12
+                                hours = 19
                                 minutes = 50
                             }
                         ),
                         Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
+                            title = "Управление ИТ-проектами и жизненным циклом ПО",
+                            teacher = "xQc",
+                            auditorium = "200",
                             startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
+                                hours = 19
+                                minutes = 55
                             },
                             endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
+                                hours = 21
+                                minutes = 25
                             }
                         )
                     )
@@ -355,42 +298,42 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Анализ данных",
+                            teacher = "Алюков",
+                            auditorium = "132Б",
                             startTime = Date().apply {
-                                hours = 11
+                                hours = 16
+                                minutes = 40
+                            },
+                            endTime = Date().apply {
+                                hours = 18
+                                minutes = 10
+                            }
+                        ),
+                        Lesson(
+                            title = "Анализ данных",
+                            teacher = "Алюков",
+                            auditorium = "132Б",
+                            startTime = Date().apply {
+                                hours = 18
                                 minutes = 20
                             },
                             endTime = Date().apply {
-                                hours = 12
+                                hours = 19
                                 minutes = 50
                             }
                         ),
                         Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
+                            title = "Базы и хранилища данных",
+                            teacher = "Барабанщиков",
+                            auditorium = "132",
                             startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
+                                hours = 19
+                                minutes = 55
                             },
                             endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
+                                hours = 21
+                                minutes = 25
                             }
                         )
                     )
@@ -400,42 +343,29 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 123",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Разработка интернет-приложений",
+                            teacher = "Павличенков",
+                            auditorium = "Online",
                             startTime = Date().apply {
-                                hours = 11
-                                minutes = 20
+                                hours = 19
+                                minutes = 30
                             },
                             endTime = Date().apply {
-                                hours = 12
-                                minutes = 50
+                                hours = 20
+                                minutes = 30
                             }
                         ),
                         Lesson(
-                            title = "some lesson 234",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
+                            title = "Разработка интернет-приложений",
+                            teacher = "Павличенков",
+                            auditorium = "Online",
                             startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
+                                hours = 20
+                                minutes = 30
                             },
                             endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 345",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 15
-                                minutes = 0
+                                hours = 21
+                                minutes = 30
                             }
                         )
                     )
@@ -445,9 +375,22 @@ object SuperMegaUltraImportantScheduleService {
                     1,
                     listOf(
                         Lesson(
-                            title = "some lesson 1",
-                            teacher = "something person",
-                            auditorium = "auditorium 1",
+                            title = "Тестирование программного обеспечения",
+                            teacher = "Булавин",
+                            auditorium = "132",
+                            startTime = Date().apply {
+                                hours = 9
+                                minutes = 40
+                            },
+                            endTime = Date().apply {
+                                hours = 11
+                                minutes = 10
+                            }
+                        ),
+                        Lesson(
+                            title = "Тестирование программного обеспечения",
+                            teacher = "Булавин",
+                            auditorium = "132",
                             startTime = Date().apply {
                                 hours = 11
                                 minutes = 20
@@ -456,67 +399,12 @@ object SuperMegaUltraImportantScheduleService {
                                 hours = 12
                                 minutes = 50
                             }
-                        ),
-                        Lesson(
-                            title = "some lesson 2",
-                            teacher = "something person",
-                            auditorium = "auditorium 2",
-                            startTime = Date().apply {
-                                hours = 13
-                                minutes = 15
-                            },
-                            endTime = Date().apply {
-                                hours = 14
-                                minutes = 45
-                            }
-                        ),
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
-                            }
-                        )
-                    )
-                ),
-                Day(
-                    DayOfWeek.SUNDAY,
-                    0,
-                    listOf(
-                        Lesson(
-                            title = "some lesson 3",
-                            teacher = "something person",
-                            auditorium = "auditorium 3",
-                            startTime = Date().apply {
-                                hours = 10
-                                minutes = 0
-                            },
-                            endTime = Date().apply {
-                                hours = 22
-                                minutes = 0
-                            }
                         )
                     )
                 )
             )
         )
     )
-
-    fun getSchedule() = schedule
-
-    fun getDayByNumber(number: Int, weekNumber: Int): Day {
-        val week = getWeekByNumber(weekNumber)
-        if (number < 0 || number >= week.days.size) {
-            throw RuntimeException("Wrong day number")
-        }
-        return week.days[number]
-    }
 
     fun getWeekByNumber(number: Int): Week {
         if (number != 1 && number != 2) {
@@ -535,18 +423,16 @@ object SuperMegaUltraImportantScheduleService {
             ?: throw RuntimeException("Day of week ${dayOfWeek.name} in week number $weekNumber does not exist")
     }
 
-    fun getDayByDayOfWeek(dayOfWeek: DayOfWeek): Day {
-        return getDayByDayOfWeek(dayOfWeek, getNowWeekNumber())
-    }
-
     fun getDayNow(): Day {
         val today = Date().day
         val dayNumber = if (today == 0) 6 else today - 1
-        return getDayByDayOfWeek(DayOfWeek.getByNumber(dayNumber), getNowWeekNumber())
+        val dayOfWeek = DayOfWeek.getByNumber(dayNumber)
+        return runCatching { getDayByDayOfWeek(dayOfWeek, getNowWeekNumber()) }
+            .getOrDefault(createEmptyDay(dayOfWeek))
     }
 
     fun getWeekNow(): Week {
-        return if (getNowWeekNumber() == 0) {
+        return if (getNowWeekNumber() == 1) {
             schedule.firstWeekSchedule
         } else {
             schedule.secondWeekSchedule
@@ -554,10 +440,18 @@ object SuperMegaUltraImportantScheduleService {
     }
 
     fun getNowWeekNumber(): Int {
-        val diff = Date().time - Date().apply {
-            month = 9
-            date = 1
-        }.time
-        return (((diff / (1000 * 60 * 60 * 24)) / 7) % 2).toInt() + 1
+        val currentDate = Date()
+        val calendar = Calendar.getInstance().apply { time = currentDate }
+        val currentWeek = calendar.get(Calendar.WEEK_OF_YEAR)
+
+        val firstSeptember = Calendar.getInstance().apply {
+            set(Calendar.MONTH, Calendar.SEPTEMBER)
+            set(Calendar.DAY_OF_MONTH, 1)
+        }
+        val startWeek = firstSeptember.get(Calendar.WEEK_OF_YEAR)
+
+        return (currentWeek - startWeek) % 2 + 1
     }
+
+    private fun createEmptyDay(dayOfWeek: DayOfWeek): Day = Day(dayOfWeek, 0, listOf())
 }

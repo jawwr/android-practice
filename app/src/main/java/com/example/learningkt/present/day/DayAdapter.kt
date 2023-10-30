@@ -64,8 +64,7 @@ class DayAdapter(
         binding: ScheduleItemLessonBinding
     ) : DayViewHolder(binding) {
         override fun bind(data: Lesson) = with(binding) {
-            val now = Date()
-            if (now.before(data.endTime) && now.after(data.startTime)) {
+            if (data.isNow()) {
                 itemView.setBackgroundResource(R.drawable.rounded_highlight_lesson_card)
             }
             lessonStartTime.text = "${data.startTime.hours}:${data.startTime.minutes}"
@@ -74,6 +73,11 @@ class DayAdapter(
             lessonName.text = data.title
             lessonTeacher.text = "Преподаватель: ${data.teacher}"
         }
+    }
+
+    private fun Lesson.isNow(): Boolean {
+        val now = Date()
+        return now.before(this.endTime) && now.after(this.startTime)
     }
 
     companion object {
